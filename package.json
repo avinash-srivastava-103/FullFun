@@ -1,0 +1,23 @@
+{
+  "name": "fullfun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/failuree/FullFun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/failuree/FullFun/issues"
+  },
+  "homepage": "https://github.com/failuree/FullFun#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "rxjs": "^6.2.2"
+  }
+}
