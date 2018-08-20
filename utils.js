@@ -110,5 +110,21 @@ function maxFinder(sampleArray, path) {
   }
  }, valueExtractor(sampleArray[0], pathArray)));
 }
+
+
+function alsoMaxFinder(sampleArray, path) {
+ var pathArray = path.split('.');
+ return sampleArray.reduce((maxNumber, iterObj) => {
+  var iterObjVal = valueExtractor(iterObj,pathArray);
+  if(maxNumber > iterObjVal) {
+    return maxNumber;
+  } else {
+    return iterObjVal;
+  }
+ }, valueExtractor(sampleArray[0], pathArray));
+}
+
 var maxValue = maxFinder(sample, "numberSystem.number");
 console.log(maxValue);
+var alsoMaxValue = maxFinder(sample, "numberSystem.number");
+console.log(alsoMaxValue);
