@@ -111,7 +111,11 @@ function maxFinder(sampleArray, path) {
  }, valueExtractor(sampleArray[0], pathArray)));
 }
 
-
+/*
+* @param Array<Array> : Input Array
+* @param path<String> : String path of traversal
+* @output Object<any> : Object containig max number 
+*/
 function alsoMaxFinder(sampleArray, path) {
  var pathArray = path.split('.');
  return sampleArray.reduce((maxNumber, iterObj) => {
