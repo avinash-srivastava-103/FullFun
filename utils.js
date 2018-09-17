@@ -132,3 +132,36 @@ var maxValue = maxFinder(sample, "numberSystem.number");
 console.log(maxValue);
 var alsoMaxValue = maxFinder(sample, "numberSystem.number");
 console.log(alsoMaxValue);
+
+
+
+//Code to check pallindrome
+var str1 = 'level';
+var str2 = 'avinash';
+
+var reverse = function (str) {
+return str.split('').reverse().join('');
+};
+
+var equator = function(str1, str2) {
+return str1 === str2;
+};
+
+var ispallindrome = function(rf,ef,str) {
+var args = Array.prototype.slice.call(arguments);
+console.log(args);
+if (!args[1]) {
+  return args[0](args[2]);
+} else {
+  return (args[1](args[0](args[2]), str));
+}
+};
+
+var boundedReverse = _.partial(ispallindrome, reverse);
+var boundedString1 = _.partial(boundedReverse, _ , str1);
+console.log(boundedString1());
+var boundedString2 = _.partial(boundedReverse, _ , str2);
+console.log(boundedString2());
+
+console.log(boundedString1(equator));
+console.log(boundedString2(equator));
