@@ -156,7 +156,7 @@ if (!args[1]) {
   return (args[1](args[0](args[2]), str));
 }
 };
-
+// var boundedReverse = ispallindrome.bind({},reverse);
 var boundedReverse = _.partial(ispallindrome, reverse);
 var boundedString1 = _.partial(boundedReverse, _ , str1);
 console.log(boundedString1());
