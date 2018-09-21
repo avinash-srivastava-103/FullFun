@@ -165,3 +165,23 @@ console.log(boundedString2());
 
 console.log(boundedString1(equator));
 console.log(boundedString2(equator));
+
+
+// String.prototype.reverse
+var str = 'level';
+var reverseStr = function(str) {
+  str.split('').reduce(function(reverse, parseChar) {
+    return parseChar + reverse;
+  },'');
+  return str;
+}
+console.log(reverseStr);
+
+
+
+
+
+
+
+
+
